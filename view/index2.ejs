@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    
+    <style>
+        body{
+            background: #c94b4b;  
+            background: -webkit-linear-gradient(to right, #4b134f, #c94b4b);  
+            background: linear-gradient(to right, #4b134f, #c94b4b); 
+        }
+    </style>
+
+    <title>Resolucion</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="navbar-brand nav-link active" href="/metodo1">New test<span class="sr-only">(current)</span></a>
+          </div>
+        </div>
+      </nav>
+
+    <div class="row m-1 mycont">
+
+        <div class="col-lg-7">
+            <h1 class="h1 text-light">Modelos del programa</h1>
+            <h4 class="h4 text-light">N = <%= interModel.length %></h4>
+
+            <ul class="list-group">
+                <%interModel.forEach((inter,index) =>{ %>
+                    <li class="list-group-item list-group-item-primary""> <%=inter %> </li>
+                    
+                <% }) %>
+            </ul>
+            
+            <h1 class="h1 text-light">No modelos del programa</h1>
+            <h4 class="h4 text-light">N = <%= noInterModel.length %></h4>
+
+            <ul class="list-group">
+                <%noInterModel.forEach((inter,index) =>{ %>
+                    <li class="list-group-item list-group-item-danger""> <%=inter %> </li>
+                    
+                <% }) %>
+            </ul>
+        </div>
+
+
+        <div class="container col-lg-5">
+            <h1 class="h1 text-light">Interpretaciones de Herbrand</h1>
+            <h4 class="h4 text-light">N = <%= interpretaciones.length %></h4>
+            <table class="table table-dark table-sm">
+                <tbody>
+                    <%interpretaciones.forEach((inter,index)=>{ %>
+                        <tr>
+                            <%inter.atomosVerdaderos.forEach((atomo,index)=>{ %>
+                                <td><%= atomo %></td>
+                                
+                            <% }) %>
+                        </tr>
+                        
+                    <% }) %>
+                </tbody>
+            </table>
+
+            <h1 class="h1 text-light">Consecuencias Logicas</h1>
+            <ul class="list-group">
+                <%consecLogic.validas.forEach((cl,index) =>{ %>
+                    <li class="list-group-item list-group-item-warning""> <%=cl %> </li>
+                <% }) %>
+            </ul>
+        </div>
+
+    </div>
+
+</body>
+</html>

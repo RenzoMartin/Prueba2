@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+      body{
+        background: #ff9966;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="/metodo1">Metodo 1</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/metodo2">Metodo 2</a>
+    </li>
+  </ul>
+
+    <div class="row m-1 container mt-5">
+
+      <div class="col-12">
+        
+        <form action="/res/1" method="POST">
+          <div class="form-group">
+            <h2 class="text-light">Base de Herbrand</h2>
+            <input type="text" class="form-control" name="inputBase" id="entrada-base" placeholder="Introducir base de H">
+          </div>
+          
+          <div class="form-group my-5">
+            <h2 class="text-light">Programa</h2>
+            
+            <input type="text" class="form-control" name="inputProg" id="entrada-programa" placeholder="Introducir programa">
+          </div>
+    
+          <div class="form-group my-5">
+            <h2 class="text-light">Consecuencias logicas a evaluar</h2>
+
+            <input type="text" class="form-control" name="consec" id="entrada-consec" placeholder="Introducir Consec. Logic.">
+          </div>
+            
+          <button type="submit" class="btn btn-primary">Calcular modelos</button>
+        </form>
+      </div>
+
+    </div>
+
+</body>
+</html>
